@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color World - دنیای رنگ‌ها</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%236C63FF'/><circle cx='50' cy='40' r='20' fill='%23FF6584'/><circle cx='35' cy='65' r='15' fill='%2336D1DC'/><circle cx='65' cy='65' r='15' fill='%23FFD700'/></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- دکمه تغییر زبان -->
+    <div class="lang-switcher">
+        <button class="lang-btn" id="lang-toggle">
+            <i class="fas fa-language"></i> EN
+        </button>
+    </div>
+
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-palette"></i>
+                    <span data-lang="fa">دنیای رنگ‌ها</span>
+                    <span data-lang="en" style="display:none">Color World</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home" data-lang="fa">خانه</a><a href="#home" data-lang="en" style="display:none">Home</a></li>
+                        <li><a href="#colors" data-lang="fa">رنگ‌ها</a><a href="#colors" data-lang="en" style="display:none">Colors</a></li>
+                        <li><a href="#info" data-lang="fa">اطلاعات رنگ</a><a href="#info" data-lang="en" style="display:none">Color Info</a></li>
+                        <li><a href="#about" data-lang="fa">درباره ما</a><a href="#about" data-lang="en" style="display:none">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش هیرو -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="fade-in" data-lang="fa">کشف دنیای بی‌پایان رنگ‌ها</h1>
+            <h1 class="fade-in" data-lang="en" style="display:none">Discover the Endless World of Colors</h1>
+            
+            <p class="fade-in" data-lang="fa">جامع‌ترین مرجع رنگ‌های جهان با بیش از ۱۵۰ رنگ مختلف برای طراحان، هنرمندان و علاقه‌مندان</p>
+            <p class="fade-in" data-lang="en" style="display:none">The most comprehensive color reference with over 150 different colors for designers, artists and enthusiasts</p>
+            
+            <a href="#colors" class="btn fade-in" data-lang="fa">شروع کاوش</a>
+            <a href="#colors" class="btn fade-in" data-lang="en" style="display:none">Start Exploring</a>
+        </div>
+    </section>
+
+    <!-- بخش رنگ‌ها -->
+    <section class="colors-section" id="colors">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-lang="fa">گالری رنگ‌های جهان</h2>
+                <h2 data-lang="en" style="display:none">World Colors Gallery</h2>
+            </div>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="color-search" placeholder="جستجوی رنگ بر اساس نام یا کد...">
+            </div>
+            
+            <div class="color-count" id="color-count">
+                <span data-lang="fa">نمایش <span id="count">۰</span> رنگ از <span id="total">۰</span> رنگ</span>
+                <span data-lang="en" style="display:none">Showing <span id="count-en">0</span> of <span id="total-en">0</span> colors</span>
+            </div>
+            
+            <div class="color-categories">
+                <button class="category-btn active" data-category="all" data-lang="fa">همه رنگ‌ها</button>
+                <button class="category-btn active" data-category="all" data-lang="en" style="display:none">All Colors</button>
+                
+                <button class="category-btn" data-category="primary" data-lang="fa">رنگ‌های اصلی</button>
+                <button class="category-btn" data-category="primary" data-lang="en" style="display:none">Primary Colors</button>
+                
+                <button class="category-btn" data-category="warm" data-lang="fa">رنگ‌های گرم</button>
+                <button class="category-btn" data-category="warm" data-lang="en" style="display:none">Warm Colors</button>
+                
+                <button class="category-btn" data-category="cool" data-lang="fa">رنگ‌های سرد</button>
+                <button class="category-btn" data-category="cool" data-lang="en" style="display:none">Cool Colors</button>
+                
+                <button class="category-btn" data-category="neutral" data-lang="fa">رنگ‌های خنثی</button>
+                <button class="category-btn" data-category="neutral" data-lang="en" style="display:none">Neutral Colors</button>
+                
+                <button class="category-btn" data-category="pastel" data-lang="fa">رنگ‌های پاستلی</button>
+                <button class="category-btn" data-category="pastel" data-lang="en" style="display:none">Pastel Colors</button>
+                
+                <button class="category-btn" data-category="vibrant" data-lang="fa">رنگ‌های درخشان</button>
+                <button class="category-btn" data-category="vibrant" data-lang="en" style="display:none">Vibrant Colors</button>
+                
+                <button class="category-btn" data-category="earth" data-lang="fa">رنگ‌های زمینی</button>
+                <button class="category-btn" data-category="earth" data-lang="en" style="display:none">Earth Colors</button>
+                
+                <button class="category-btn" data-category="jewel" data-lang="fa">رنگ‌های جواهری</button>
+                <button class="category-btn" data-category="jewel" data-lang="en" style="display:none">Jewel Colors</button>
+            </div>
+            
+            <div class="colors-grid" id="colors-container">
+                <!-- رنگ‌ها با جاوااسکریپت اضافه خواهند شد -->
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش اطلاعات رنگ -->
+    <section class="color-info-section" id="info">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-lang="fa" style="color: white;">دانستنی‌های رنگ</h2>
+                <h2 data-lang="en" style="color: white; display:none">Color Knowledge</h2>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card fade-in">
+                    <div class="info-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3 data-lang="fa">تاریخچه رنگ‌ها</h3>
+                    <h3 data-lang="en" style="display:none">Color History</h3>
+                    <p data-lang="fa">رنگ‌ها از دیرباز در فرهنگ‌های مختلف نماد معانی خاصی بوده‌اند. از رنگ‌های طبیعی گرفته تا رنگ‌های مصنوعی مدرن، هر کدام داستان خود را دارند.</p>
+                    <p data-lang="en" style="display:none">Colors have long been symbols of specific meanings in different cultures. From natural colors to modern synthetic ones, each has its own story.</p>
+                </div>
+                
+                <div class="info-card fade-in">
+                    <div class="info-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-lang="fa">روانشناسی رنگ‌ها</h3>
+                    <h3 data-lang="en" style="display:none">Color Psychology</h3>
+                    <p data-lang="fa">رنگ‌ها تأثیر عمیقی بر احساسات و رفتار انسان دارند. هر رنگ می‌تواند حس خاصی را القا کند و در طراحی و بازاریابی نقش مهمی ایفا می‌کند.</p>
+                    <p data-lang="en" style="display:none">Colors have a profound impact on human emotions and behavior. Each color can evoke specific feelings and plays an important role in design and marketing.</p>
+                </div>
+                
+                <div class="info-card fade-in">
+                    <div class="info-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3 data-lang="fa">رنگ در فرهنگ‌ها</h3>
+                    <h3 data-lang="en" style="display:none">Colors in Cultures</h3>
+                    <p data-lang="fa">معنای رنگ‌ها در فرهنگ‌های مختلف جهان متفاوت است. آنچه در یک فرهنگ نماد شادی است، ممکن است در فرهنگ دیگر نشانه غم باشد.</p>
+                    <p data-lang="en" style="display:none">The meaning of colors varies across different cultures worldwide. What symbolizes joy in one culture may signify sorrow in another.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container" id="about">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-lang="fa">دنیای رنگ‌ها</h3>
+                    <h3 data-lang="en" style="display:none">Color World</h3>
+                    <p data-lang="fa">مرجع تخصصی و جامع رنگ‌ها برای طراحان، هنرمندان و همه علاقه‌مندان به دنیای رنگ</p>
+                    <p data-lang="en" style="display:none">Specialized and comprehensive color reference for designers, artists and all color enthusiasts</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-lang="fa">دسته‌بندی رنگ‌ها</h3>
+                    <h3 data-lang="en" style="display:none">Color Categories</h3>
+                    <ul>
+                        <li><a href="#" data-category="primary" data-lang="fa">رنگ‌های اصلی</a><a href="#" data-category="primary" data-lang="en" style="display:none">Primary Colors</a></li>
+                        <li><a href="#" data-category="warm" data-lang="fa">رنگ‌های گرم</a><a href="#" data-category="warm" data-lang="en" style="display:none">Warm Colors</a></li>
+                        <li><a href="#" data-category="cool" data-lang="fa">رنگ‌های سرد</a><a href="#" data-category="cool" data-lang="en" style="display:none">Cool Colors</a></li>
+                        <li><a href="#" data-category="pastel" data-lang="fa">رنگ‌های پاستلی</a><a href="#" data-category="pastel" data-lang="en" style="display:none">Pastel Colors</a></li>
+                        <li><a href="#" data-category="vibrant" data-lang="fa">رنگ‌های درخشان</a><a href="#" data-category="vibrant" data-lang="en" style="display:none">Vibrant Colors</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-lang="fa">لینک‌های مفید</h3>
+                    <h3 data-lang="en" style="display:none">Useful Links</h3>
+                    <ul>
+                        <li><a href="#home" data-lang="fa">خانه</a><a href="#home" data-lang="en" style="display:none">Home</a></li>
+                        <li><a href="#colors" data-lang="fa">گالری رنگ‌ها</a><a href="#colors" data-lang="en" style="display:none">Color Gallery</a></li>
+                        <li><a href="#info" data-lang="fa">دانستنی‌ها</a><a href="#info" data-lang="en" style="display:none">Knowledge</a></li>
+                        <li><a href="#about" data-lang="fa">درباره ما</a><a href="#about" data-lang="en" style="display:none">About Us</a></li>
+                        <li><a href="#" data-lang="fa">تماس با ما</a><a href="#" data-lang="en" style="display:none">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-lang="fa">تماس با ما</h3>
+                    <h3 data-lang="en" style="display:none">Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-lang="fa">تهران، خیابان ولیعصر</span><span data-lang="en" style="display:none">Tehran, Valiasr Street</span></li>
+                        <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li><i class="fas fa-envelope"></i> info@colorworld.ir</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p data-lang="fa">© ۲۰۲5 دنیای رنگ‌ها. تمام حقوق محفوظ است.</p>
+                <p data-lang="en" style="display:none">© 2025 Color World. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
